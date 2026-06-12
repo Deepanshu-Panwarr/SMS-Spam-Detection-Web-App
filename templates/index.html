@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMS Spam Detection</title>
+</head>
+
+<body>
+
+    <h1>SMS Spam Detection System</h1>
+
+    <p>
+        Enter a message below to check whether it is Spam or Ham using Machine Learning.
+    </p>
+
+    <form action="/predict" method="POST">
+
+        <textarea 
+            name="message"
+            rows="8"
+            cols="60"
+            placeholder="Enter your SMS message here..."
+            required></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Predict Message
+        </button>
+
+    </form>
+
+    {% if result %}
+        <h2>Prediction Result:</h2>
+        <h3>{{ result }}</h3>
+    {% endif %}
+
+</body>
+</html>
