@@ -11,6 +11,11 @@ app = Flask(__name__)
 
 stemmer = PorterStemmer()
 
+import os
+
+if not os.path.exists("model.pkl"):
+    import model_train
+
 # Load trained ML model and TF-IDF vectorizer
 with open("model.pkl", "rb") as file:
     model = pickle.load(file)
