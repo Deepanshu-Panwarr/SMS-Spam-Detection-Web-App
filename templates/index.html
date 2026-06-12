@@ -2,10 +2,13 @@
 <html>
 <head>
     <title>SMS Spam Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
 </head>
 
 <body>
 
+    <div class="container">
+    
     <h1>SMS Spam Detection System</h1>
 
     <p>
@@ -33,6 +36,7 @@
         <h2>Prediction Result:</h2>
         <h3>{{ result }}</h3>
     {% endif %}
+    </div>
 
 </body>
 </html>
